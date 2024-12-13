@@ -24,6 +24,14 @@ const BookShelf = () => {
         })
     }
 
+    //  const booksList = books.map((book) => 
+    //         <div>
+    //             <h2>{book.title}</h2>
+    //             <p>{book.author}</p>
+    //         </div>
+    //     )
+
+
     return ( 
         <> 
 <div className="bookshelfDiv">
@@ -36,7 +44,7 @@ const BookShelf = () => {
             name="title"
             id="title"
             placeholder="add the title"
-            value={newBook.name}
+            value={newBook.title}
             onChange={handleInputChange}
             />
 
@@ -49,10 +57,20 @@ const BookShelf = () => {
             value={newBook.author}
             onChange={handleInputChange}
             />
-            <button type="submit">Submit</button>
+            <button type="submit">Add Book</button>
             </form>
         </div>
-        <div className="bookCardsDiv"> {/* Book cards will display here */} </div>
+
+        <div className="bookCardsDiv"> 
+            <div className="bookCard"> 
+                { books.map((book) => 
+                    <div>
+                        <h4>{book.title}</h4>
+                        <p>{book.author}</p>
+                    </div>
+                )}
+            </div>
+        </div>
 </div>
 </>
     )
