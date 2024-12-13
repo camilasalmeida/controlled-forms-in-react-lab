@@ -5,7 +5,7 @@ const App = () => {
   
   return ( 
   <>
-  <h1>Hello world!🌍</h1>
+  <h1 style={{ color: 'white' }}>My Bookshelf 📚</h1>
   <BookShelf />
   </>
   )
